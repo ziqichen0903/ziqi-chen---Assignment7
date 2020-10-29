@@ -56,3 +56,6 @@ spotless {
         googleJavaFormat('1.8')
     }
 }
+afterEvaluate {
+    tasks.getByName('spotlessCheck').dependsOn(tasks.getByName('spotlessApply'))
+}

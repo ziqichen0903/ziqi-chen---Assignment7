@@ -289,22 +289,11 @@ public class Display implements ActionListener {
       text.setText("" + Long.toBinaryString(Long.parseLong(text.getText())));
     } catch (NumberFormatException ex) {
       System.err.println("Error while parse to binary." + ex.toString());
-
-
-
-
-
-
-
     }
   }
 
   public Double readFromDisplay() {
     return Double.valueOf(text.getText());
-
-
-
-
   }
 
   public void writeToDisplay(final Double num) {
@@ -312,9 +301,6 @@ public class Display implements ActionListener {
       text.setText("");
     } else {
       text.setText(Double.toString(num));
-
-
-
     }
   }
 }
