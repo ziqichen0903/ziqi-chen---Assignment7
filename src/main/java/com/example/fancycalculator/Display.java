@@ -293,7 +293,10 @@ public class Display implements ActionListener {
   }
 
   public Double readFromDisplay() {
-    return Double.valueOf(text.getText());
+    if (!text.getText().isEmpty()) {
+      return Double.valueOf(text.getText());
+    }
+    return 0.0;
   }
 
   public void writeToDisplay(final Double num) {
